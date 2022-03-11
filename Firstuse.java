@@ -1,7 +1,4 @@
 import Airth.First;
-import Airth.Second;
-import Airth.Third;
-
 import java.util.Scanner;
 
 class Get
@@ -15,12 +12,11 @@ class Firstuse extends Get
 	
 	public static void main(String args[])
 	{
-		System.out.println("How Many Nos Sum Do you Want...?");
+		System.out.println("How Many Numbers Do you Want to Operate...?");
 		nos = sc.nextInt();
 		
 		First a1 = new First();
-		Second s1 = new Second();
-		Third t1 = new Third();
+	
 		
 		if(nos == 2)
 		{
@@ -39,7 +35,7 @@ class Firstuse extends Get
 			n3 = sc.nextInt();	
 		}
 		
-		System.out.println("What Do YOu Want To do.. \n 1 for Addtion \n 2 for Substraction");
+		System.out.println("What Do YOu Want To do.. \n 1 for Addtion \n 2 for Substraction \n 3 For Multiplication \n 4 For Division");
 		ope = sc.nextInt();
 		
 		if(ope == 1)
@@ -47,7 +43,7 @@ class Firstuse extends Get
 			switch(nos)
 			{
 				case 2:
-					t1.multi(n1,n2);
+					a1.add(n1,n2);
 					break;
 				
 				case 3:
@@ -55,21 +51,44 @@ class Firstuse extends Get
 					break;		
 			}
 		}
+		else if(ope == 2)
+		{
+			switch(nos)
+			{
+				case 2:
+					a1.sub(n1,n2);
+					break;
+				
+				case 3:
+					a1.sub(n1,n2,n3);
+					break;
+			}
+		}
+		else if(ope == 3)
+		{
+			switch(nos)
+			{
+				case 2:
+					a1.multi(n1,n2);
+					break;
+				
+				case 3:
+					a1.multi(n1,n2,n3);
+					break;
+			}
+		}
 		else 
 		{
 			switch(nos)
 			{
 				case 2:
-					s1.sub(n1,n2);
+					a1.divi(n1,n2);
 					break;
 				
 				case 3:
-					s1.sub(n1,n2,n3);
-					break;
+					System.out.println("There is Only Two Numbers Divide");
+				
 			}
 		}
-		
-		
-		
 	}
 }
